@@ -6,6 +6,7 @@
 tellraw @s ["",{"text":"You've been spotted!","bold":true,"color":"red"}]
 scoreboard players set @s guardtime 0
 scoreboard players set @s found 1
+execute at @s as @e[tag=guard,sort=nearest,limit=1] run data modify entity @s NoAI set value 0b
 
 
 
