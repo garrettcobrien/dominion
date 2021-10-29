@@ -6,7 +6,8 @@
 tag @s add stopped
 setblock ~ ~-2 ~ blue_wool
 
-execute if entity @s[y_rotation=90] run function guards:lookaround180 
-execute if entity @s[y_rotation=180] run function guards:lookaround180
-execute if entity @s[y_rotation=0] run function guards:lookaround180
-execute if entity @s[y_rotation=270] run function guards:lookaround180
+execute as @e[type=minecraft:zombie,tag=stopped] at @s if score out math matches ..50 run schedule function guards:restartguard 3s
+execute as @e[type=minecraft:zombie,tag=stopped] at @s if score out math matches 51.. run schedule function guards:restartguard 5s
+
+
+##setblock ~ ~-2 ~ blue_wool
