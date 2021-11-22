@@ -9,4 +9,4 @@ scoreboard players add @s found 1
 tag @s add spotted
 execute at @s as @e[tag=guard,sort=nearest,limit=1] run data modify entity @s NoAI set value 0b
 
-#In order to do something in game run an execute if entity scores={found=1}
+#In order to do something in game run an execute if entity tag = spotted
