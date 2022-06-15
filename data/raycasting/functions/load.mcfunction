@@ -6,8 +6,6 @@
 scoreboard objectives add temp dummy
 scoreboard objectives add guardtime dummy
 scoreboard objectives add guarddelay dummy
-scoreboard objectives add found dummy
-scoreboard players set @a found 0
 
 #guardpathing init
 scoreboard objectives add direction dummy
@@ -20,9 +18,6 @@ scoreboard players set #2 constant 2
 scoreboard players set #lcg constant 1103515245
 
 execute unless score #lcg math matches ..0 unless score #lcg math matches 1.. run function rng:uuid_reset
-
-
-#On entrance, the score for found must be set to 0
 
 #this is a global load/init
 
